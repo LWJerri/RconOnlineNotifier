@@ -19,7 +19,7 @@ async function onlineCheck() {
     actualPlayersListHash = playersListHash;
   }
 
-  if (actualPlayersListHash !== playersListHash && playersList[0] !== "") {
+  if (actualPlayersListHash !== playersListHash && playersList[0] !== "" && playersList[0] !== "LWJerri") {
     actualPlayersListHash = playersListHash;
 
     try {
