@@ -1,0 +1,41 @@
+{
+  "name": "ilyarcon",
+  "version": "1.0.0",
+  "description": "Sime RCON application for Minecraft server",
+  "main": "./dist/app.js",
+  "scripts": {
+    "prebuild": "rm -rf dist",
+    "build": "tsc",
+    "prestart": "pnpm run build",
+    "start": "node ./dist/app.js",
+    "dev": "tsx watch ./src/app.ts"
+  },
+  "engines": {
+    "node": ">= 16"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LWJerri/IlyaRcon.git"
+  },
+  "keywords": [],
+  "author": "LWJerri (lwjerri.dev)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LWJerri/IlyaRcon/issues"
+  },
+  "homepage": "https://github.com/LWJerri/IlyaRcon#readme",
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "@types/node-cron": "^3.0.7",
+    "@types/object-hash": "^3.0.2",
+    "prettier": "^2.8.7",
+    "typescript": "^5.0.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "node-cron": "^3.0.2",
+    "object-hash": "^3.0.0",
+    "rcon-client": "^4.2.3",
+    "tsx": "^3.12.6"
+  }
+}
