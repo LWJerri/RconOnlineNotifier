@@ -5,10 +5,10 @@ import { Rcon } from "rcon-client";
 
 const { RCON_HOST, RCON_PASSWORD, RCON_PORT, BOT_TOKEN, CHAT_ID } = process.env;
 
+let actualPlayersListHash: string;
+
 async function onlineCheck() {
   const rconClient = await Rcon.connect({ host: RCON_HOST, password: RCON_PASSWORD, port: Number(RCON_PORT) });
-
-  let actualPlayersListHash: string;
 
   const onlineList = await rconClient.send("list");
   const [title, players] = onlineList.split(": ");
@@ -19,7 +19,9 @@ async function onlineCheck() {
     actualPlayersListHash = playersListHash;
   }
 
-  if (actualPlayersListHash !== playersListHash && playersList[0] !== "" && playersList[0] !== "LWJerri") {
+  if (actualPlayersListHash !== playersListHash) {
+    if ((playersList.length === 1 && playersList[0] === "LWJerri") || playersList[0] === "") return;
+
     actualPlayersListHash = playersListHash;
 
     try {

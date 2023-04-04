@@ -1,6 +1,6 @@
 {
   "name": "ilyarcon",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Sime RCON application for Minecraft server",
   "main": "./dist/app.js",
   "scripts": {
