@@ -1,6 +1,6 @@
 {
   "name": "ilyarcon",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Sime RCON application for Minecraft server",
   "main": "./dist/app.js",
   "scripts": {
@@ -25,11 +25,11 @@
   },
   "homepage": "https://github.com/LWJerri/IlyaRcon#readme",
   "devDependencies": {
-    "@types/node": "^18.15.11",
+    "@types/node": "^18.16.0",
     "@types/node-cron": "^3.0.7",
     "@types/object-hash": "^3.0.2",
-    "prettier": "^2.8.7",
-    "typescript": "^5.0.3"
+    "prettier": "^2.8.8",
+    "typescript": "^5.0.4"
   },
   "dependencies": {
     "dotenv": "^16.0.3",
