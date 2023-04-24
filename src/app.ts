@@ -12,7 +12,7 @@ async function onlineCheck() {
 
   const onlineList = await rconClient.send("list");
   const [title, players] = onlineList.split(": ");
-  const playersList = players.split(", ");
+  const playersList = players.split(", ").sort();
   const playersListHash = hash(playersList);
 
   if (!actualPlayersListHash) {
