@@ -14,13 +14,13 @@ dependencies:
     specifier: ^4.2.3
     version: 4.2.3
   tsx:
-    specifier: ^3.12.6
-    version: 3.12.6
+    specifier: ^3.12.7
+    version: 3.12.7
 
 devDependencies:
   "@types/node":
-    specifier: ^18.16.0
-    version: 18.16.0
+    specifier: ^20.1.0
+    version: 20.1.0
   "@types/node-cron":
     specifier: ^3.0.7
     version: 3.0.7
@@ -284,9 +284,9 @@ packages:
       { integrity: sha512-9PuLtBboc/+JJ7FshmJWv769gDonTpItN0Ol5TMwclpSQNjVyB2SRxSKBcTtbSysSL5R7Oea06kTTFNciCoYwA== }
     dev: true
 
-  /@types/node@18.16.0:
+  /@types/node@20.1.0:
     resolution:
-      { integrity: sha512-BsAaKhB+7X+H4GnSjGhJG9Qi8Tw+inU9nJDwmD5CgOmBLEI6ArdhikpLX7DjbjDRDTbqZzU2LSQNZg8WGPiSZQ== }
+      { integrity: sha512-O+z53uwx64xY7D6roOi4+jApDGFg0qn6WHcxe5QeqjMaTezBO/mxdfFXIVAVVyNWKx84OmPB3L8kbVYOTeN34A== }
     dev: true
 
   /@types/object-hash@3.0.2:
@@ -392,9 +392,9 @@ packages:
     engines: { node: ">=0.10.0" }
     dev: false
 
-  /tsx@3.12.6:
+  /tsx@3.12.7:
     resolution:
-      { integrity: sha512-q93WgS3lBdHlPgS0h1i+87Pt6n9K/qULIMNYZo07nSeu2z5QE2CellcAZfofVXBo2tQg9av2ZcRMQ2S2i5oadQ== }
+      { integrity: sha512-C2Ip+jPmqKd1GWVQDvz/Eyc6QJbGfE7NrR3fx5BpEHMZsEHoIxHL1j+lKdGobr8ovEyqeNkPLSKp6SCSOt7gmw== }
     hasBin: true
     dependencies:
       "@esbuild-kit/cjs-loader": 2.4.2
