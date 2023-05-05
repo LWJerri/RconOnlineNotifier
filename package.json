@@ -25,7 +25,11 @@
   },
   "homepage": "https://github.com/LWJerri/IlyaRcon#readme",
   "devDependencies": {
+<<<<<<< HEAD
     "@types/node": "^20.1.0",
+=======
+    "@types/node": "^20.0.0",
+>>>>>>> 9a15991c8ad246ec56b5824e74de26a7e3152d4b
     "@types/node-cron": "^3.0.7",
     "@types/object-hash": "^3.0.2",
     "prettier": "^2.8.8",
