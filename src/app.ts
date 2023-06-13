@@ -1,26 +1,24 @@
 import "dotenv/config";
 import cron from "node-cron";
-import hash from "object-hash";
 import { Rcon } from "rcon-client";
 
-const { RCON_HOST, RCON_PASSWORD, RCON_PORT, BOT_TOKEN, CHAT_ID } = process.env;
+const { RCON_HOST: host, RCON_PASSWORD: password, RCON_PORT, BOT_TOKEN, CHAT_ID } = process.env;
 
-let actualPlayersListHash: string;
+let actualPlayersList: string[];
 
-async function onlineCheck() {
-  const rconClient = await Rcon.connect({ host: RCON_HOST, password: RCON_PASSWORD, port: Number(RCON_PORT) });
+async function checkCurrentOnline() {
+  const rconClient = await Rcon.connect({ host, password, port: parseInt(RCON_PORT) });
 
-  const onlineList = await rconClient.send("list");
-  const [title, players] = onlineList.split(": ");
-  const playersList = players.split(", ").sort();
-  const playersListHash = hash(playersList);
+  const currentOnline = await rconClient.send("list");
+  const [title, unparsedPlayers] = currentOnline.split(": ");
+  const parsedPlayersArray = unparsedPlayers.split(", ").sort();
 
-  if (!actualPlayersListHash) {
-    actualPlayersListHash = playersListHash;
+  if (!actualPlayersList) {
+    actualPlayersList = parsedPlayersArray;
   }
 
-  if (actualPlayersListHash !== playersListHash && playersList[0] !== "") {
-    actualPlayersListHash = playersListHash;
+  if (JSON.stringify(actualPlayersList) !== JSON.stringify(parsedPlayersArray) && parsedPlayersArray[0] !== "") {
+    actualPlayersList = parsedPlayersArray;
 
     try {
       await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
@@ -30,7 +28,7 @@ async function onlineCheck() {
         },
         body: JSON.stringify({
           chat_id: CHAT_ID,
-          text: `${title}:\n\n- ${playersList.join(", ")}`,
+          text: `${title}:\n\n- ${parsedPlayersArray.join(", ")}`,
         }),
       });
     } catch (err) {
@@ -39,4 +37,4 @@ async function onlineCheck() {
   }
 }
 
-cron.schedule("*/30 * * * *", async () => await onlineCheck(), { runOnInit: true, timezone: "Europe/Kyiv" });
+cron.schedule("*/30 * * * *", async () => await checkCurrentOnline(), { runOnInit: true, timezone: "Europe/Kyiv" });
