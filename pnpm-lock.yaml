@@ -24,7 +24,7 @@ devDependencies:
     version: 3.0.8
   prettier:
     specifier: ^3.0.0
-    version: 3.0.0
+    version: 3.0.1
   tsx:
     specifier: ^3.12.7
     version: 3.12.7
@@ -319,8 +319,8 @@ packages:
       uuid: 8.3.2
     dev: false
 
-  /prettier@3.0.0:
-    resolution: {integrity: sha512-zBf5eHpwHOGPC47h0zrPyNn+eAEIdEzfywMoYn2XPi0P44Zp0tSq64rq0xAREh4auw2cJZHo9QUob+NqCQky4g==}
+  /prettier@3.0.1:
+    resolution: {integrity: sha512-fcOWSnnpCrovBsmFZIGIy9UqK2FaI7Hqax+DIO0A9UxeVoY4iweyaFjS5TavZN97Hfehph0nhsZnjlVKzEQSrQ==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true
