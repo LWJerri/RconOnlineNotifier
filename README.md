@@ -6,9 +6,8 @@ Script for monitoring online on the server Minecraft with the subsequent sending
 
 ### Requirements
 
-- Installed Node.js.
-- Installed Docker.
-- Installed `pnpm`.
+- Installed [Node.js](https://nodejs.org/ru) or [Docker](https://www.docker.com/).
+- Installed any package manager (npm, yarn, etc.).
 
 ### Installing
 
@@ -22,8 +21,8 @@ Script for monitoring online on the server Minecraft with the subsequent sending
 
 #### Node.js
 
-1. Install all packages - `pnpm i`.
-2. Run application - `pnpm start`.
+1. Install all packages, using your package manager.
+2. Run application. Done!
 
 ## Contributing
 

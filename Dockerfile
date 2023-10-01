@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY package.json pnpm-lock.yaml .npmrc ./
 
-RUN npm i pnpm -g
+RUN corepack enable
 RUN pnpm i
 
 COPY . /app
