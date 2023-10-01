@@ -17,8 +17,8 @@ dependencies:
 
 devDependencies:
   "@types/node":
-    specifier: ^20.4.4
-    version: 20.7.1
+    specifier: ^20.8.0
+    version: 20.8.0
   "@types/node-cron":
     specifier: ^3.0.8
     version: 3.0.9
@@ -258,9 +258,9 @@ packages:
       { integrity: sha512-P10Vf+oagnMbefD31nqjS/dpBM34qzfdpvIgVZwtwsNb0Hg2lDaPFeGcyGUJIqh3zHlDMwYXGeunGgMnswgnPg== }
     dev: true
 
-  /@types/node@20.7.1:
+  /@types/node@20.8.0:
     resolution:
-      { integrity: sha512-LT+OIXpp2kj4E2S/p91BMe+VgGX2+lfO+XTpfXhh+bCk2LkQtHZSub8ewFBMGP5ClysPjTDFa4sMI8Q3n4T0wg== }
+      { integrity: sha512-LzcWltT83s1bthcvjBmiBvGJiiUe84NWRHkw+ZV6Fr41z2FbIzvc815dk2nQ3RAKMuN2fkenM/z3Xv2QzEpYxQ== }
     dev: true
 
   /buffer-from@1.1.2:
